@@ -73,17 +73,29 @@ example : ∃ a b c d : ℕ,
 
 
 example : ∃ t : ℚ, t ^ 2 = 1.69 := by
-  sorry
+  use 1.3
+  ring
+
 example : ∃ m n : ℤ, m ^ 2 + n ^ 2 = 85 := by
-  sorry
+  use 6, 7
+  ring
 
 example : ∃ x : ℝ, x < 0 ∧ x ^ 2 < 1 := by
-  sorry
+  use -0.3
+  constructor
+  numbers
+  numbers
+
 example : ∃ a b : ℕ, 2 ^ a = 5 * b + 1 := by
-  sorry
+  use 4, 3
+  ring
 
 example (x : ℚ) : ∃ y : ℚ, y ^ 2 > x := by
+  use x+1
   sorry
+
+
+
 
 example {t : ℝ} (h : ∃ a : ℝ, a * t + 1 < a + t) : t ≠ 1 := by
   sorry
